@@ -1,0 +1,914 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		185E192C28831348006FC004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E192B28831348006FC004 /* AppDelegate.swift */; };
+		185E192E28831348006FC004 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E192D28831348006FC004 /* SceneDelegate.swift */; };
+		185E193028831348006FC004 /* NasaAPODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E192F28831348006FC004 /* NasaAPODViewController.swift */; };
+		185E19352883134A006FC004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185E19342883134A006FC004 /* Assets.xcassets */; };
+		185E19382883134A006FC004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E19362883134A006FC004 /* LaunchScreen.storyboard */; };
+		185E19432883134A006FC004 /* NasaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19422883134A006FC004 /* NasaAppTests.swift */; };
+		185E194D2883134A006FC004 /* NasaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E194C2883134A006FC004 /* NasaAppUITests.swift */; };
+		185E194F2883134A006FC004 /* NasaAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E194E2883134A006FC004 /* NasaAppUITestsLaunchTests.swift */; };
+		185E195D28831D1E006FC004 /* NasaApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E195B28831D1E006FC004 /* NasaApp.storyboard */; };
+		185E195F28832FA7006FC004 /* APODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E195E28832FA7006FC004 /* APODModel.swift */; };
+		185E19642883375F006FC004 /* APODCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19632883375F006FC004 /* APODCell.swift */; };
+		185E19DE2883451D006FC004 /* ImageDownloadUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19BD2883451D006FC004 /* ImageDownloadUtility.swift */; };
+		185E19EB2883507A006FC004 /* ImageURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19EA2883507A006FC004 /* ImageURLProtocol.swift */; };
+		185E19EF2883EEEB006FC004 /* NasaAPODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19EE2883EEEB006FC004 /* NasaAPODDetailViewController.swift */; };
+		185E19F22883F29C006FC004 /* APODDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19F02883F29C006FC004 /* APODDetailViewCell.swift */; };
+		185E19F928840D0B006FC004 /* APODPlaceHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19F828840D0B006FC004 /* APODPlaceHolderCell.swift */; };
+		185E19FB28841A60006FC004 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E19FA28841A60006FC004 /* CoreDataManager.swift */; };
+		185E1A0028841FD0006FC004 /* NasaAPOD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 185E19FE28841FD0006FC004 /* NasaAPOD.xcdatamodeld */; };
+		185E1A3128844DD1006FC004 /* BaseWebServiceConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A0A28844DD0006FC004 /* BaseWebServiceConnector.m */; };
+		185E1A3628844DD1006FC004 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A1928844DD1006FC004 /* Reachability.m */; };
+		185E1A4628848D6A006FC004 /* GetAPODByRangeConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A4528848D69006FC004 /* GetAPODByRangeConnector.m */; };
+		185E1A4828849046006FC004 /* SearchAPODConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A4728849046006FC004 /* SearchAPODConnector.m */; };
+		185E1A4C288493C3006FC004 /* APODWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A4B288493C3006FC004 /* APODWebService.m */; };
+		185E1A4F28849427006FC004 /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A4E28849427006FC004 /* WebServiceManager.m */; };
+		185E1A53288494B6006FC004 /* SimpleParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A52288494B6006FC004 /* SimpleParameter.m */; };
+		185E1A56288494FA006FC004 /* SimpleResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A55288494FA006FC004 /* SimpleResponse.m */; };
+		185E1A5B288495AA006FC004 /* BaseResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A5A288495AA006FC004 /* BaseResponseHandler.m */; };
+		185E1A5E288495E1006FC004 /* GetAPODByRangeResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A5D288495E1006FC004 /* GetAPODByRangeResponseHandler.m */; };
+		185E1A6128849634006FC004 /* SearchAPODResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A6028849634006FC004 /* SearchAPODResponseHandler.m */; };
+		185E1A65288496EC006FC004 /* BaseWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A64288496EC006FC004 /* BaseWebService.m */; };
+		185E1A682884972E006FC004 /* RestWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A672884972E006FC004 /* RestWebService.m */; };
+		185E1A6B288497C4006FC004 /* BaseWebServiceCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A6A288497C4006FC004 /* BaseWebServiceCall.m */; };
+		185E1A6E2884AB3E006FC004 /* NASASearchAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E1A6D2884AB3E006FC004 /* NASASearchAPIViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		185E193F2883134A006FC004 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 185E192028831347006FC004 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 185E192728831348006FC004;
+			remoteInfo = NasaApp;
+		};
+		185E19492883134A006FC004 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 185E192028831347006FC004 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 185E192728831348006FC004;
+			remoteInfo = NasaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		185E192828831348006FC004 /* NasaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185E192B28831348006FC004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		185E192D28831348006FC004 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		185E192F28831348006FC004 /* NasaAPODViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPODViewController.swift; sourceTree = "<group>"; };
+		185E19342883134A006FC004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		185E19372883134A006FC004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		185E19392883134A006FC004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185E193E2883134A006FC004 /* NasaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		185E19422883134A006FC004 /* NasaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAppTests.swift; sourceTree = "<group>"; };
+		185E19482883134A006FC004 /* NasaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		185E194C2883134A006FC004 /* NasaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAppUITests.swift; sourceTree = "<group>"; };
+		185E194E2883134A006FC004 /* NasaAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		185E195C28831D1E006FC004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NasaApp.storyboard; sourceTree = "<group>"; };
+		185E195E28832FA7006FC004 /* APODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModel.swift; sourceTree = "<group>"; };
+		185E19632883375F006FC004 /* APODCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCell.swift; sourceTree = "<group>"; };
+		185E19BD2883451D006FC004 /* ImageDownloadUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadUtility.swift; sourceTree = "<group>"; };
+		185E19EA2883507A006FC004 /* ImageURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLProtocol.swift; sourceTree = "<group>"; };
+		185E19EE2883EEEB006FC004 /* NasaAPODDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPODDetailViewController.swift; sourceTree = "<group>"; };
+		185E19F02883F29C006FC004 /* APODDetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODDetailViewCell.swift; sourceTree = "<group>"; };
+		185E19F828840D0B006FC004 /* APODPlaceHolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODPlaceHolderCell.swift; sourceTree = "<group>"; };
+		185E19FA28841A60006FC004 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		185E19FF28841FD0006FC004 /* NasaAPOD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NasaAPOD.xcdatamodel; sourceTree = "<group>"; };
+		185E1A0328844DCF006FC004 /* NasaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NasaApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		185E1A0828844DD0006FC004 /* BaseWebServiceConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebServiceConnector.h; sourceTree = "<group>"; };
+		185E1A0928844DD0006FC004 /* SearchAPODConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPODConnector.h; sourceTree = "<group>"; };
+		185E1A0A28844DD0006FC004 /* BaseWebServiceConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebServiceConnector.m; sourceTree = "<group>"; };
+		185E1A0B28844DD0006FC004 /* GetAPODByRangeConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAPODByRangeConnector.h; sourceTree = "<group>"; };
+		185E1A1928844DD1006FC004 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		185E1A1A28844DD1006FC004 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		185E1A4428848D69006FC004 /* IWebServiceConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IWebServiceConnector.h; sourceTree = "<group>"; };
+		185E1A4528848D69006FC004 /* GetAPODByRangeConnector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetAPODByRangeConnector.m; sourceTree = "<group>"; };
+		185E1A4728849046006FC004 /* SearchAPODConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAPODConnector.m; sourceTree = "<group>"; };
+		185E1A4928849324006FC004 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		185E1A4A2884935B006FC004 /* APODWebService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APODWebService.h; sourceTree = "<group>"; };
+		185E1A4B288493C3006FC004 /* APODWebService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APODWebService.m; sourceTree = "<group>"; };
+		185E1A4D28849427006FC004 /* WebServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebServiceManager.h; sourceTree = "<group>"; };
+		185E1A4E28849427006FC004 /* WebServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebServiceManager.m; sourceTree = "<group>"; };
+		185E1A5028849479006FC004 /* IWebServiceParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IWebServiceParameter.h; sourceTree = "<group>"; };
+		185E1A51288494B6006FC004 /* SimpleParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleParameter.h; sourceTree = "<group>"; };
+		185E1A52288494B6006FC004 /* SimpleParameter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleParameter.m; sourceTree = "<group>"; };
+		185E1A54288494FA006FC004 /* SimpleResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleResponse.h; sourceTree = "<group>"; };
+		185E1A55288494FA006FC004 /* SimpleResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleResponse.m; sourceTree = "<group>"; };
+		185E1A5728849528006FC004 /* IWebServiceResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IWebServiceResponse.h; sourceTree = "<group>"; };
+		185E1A5828849576006FC004 /* IWebServiceResponseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IWebServiceResponseHandler.h; sourceTree = "<group>"; };
+		185E1A59288495AA006FC004 /* BaseResponseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResponseHandler.h; sourceTree = "<group>"; };
+		185E1A5A288495AA006FC004 /* BaseResponseHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResponseHandler.m; sourceTree = "<group>"; };
+		185E1A5C288495E1006FC004 /* GetAPODByRangeResponseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetAPODByRangeResponseHandler.h; sourceTree = "<group>"; };
+		185E1A5D288495E1006FC004 /* GetAPODByRangeResponseHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetAPODByRangeResponseHandler.m; sourceTree = "<group>"; };
+		185E1A5F28849634006FC004 /* SearchAPODResponseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchAPODResponseHandler.h; sourceTree = "<group>"; };
+		185E1A6028849634006FC004 /* SearchAPODResponseHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchAPODResponseHandler.m; sourceTree = "<group>"; };
+		185E1A62288496B2006FC004 /* IWebService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IWebService.h; sourceTree = "<group>"; };
+		185E1A63288496EC006FC004 /* BaseWebService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWebService.h; sourceTree = "<group>"; };
+		185E1A64288496EC006FC004 /* BaseWebService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWebService.m; sourceTree = "<group>"; };
+		185E1A662884972E006FC004 /* RestWebService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestWebService.h; sourceTree = "<group>"; };
+		185E1A672884972E006FC004 /* RestWebService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestWebService.m; sourceTree = "<group>"; };
+		185E1A6928849774006FC004 /* IWebServiceCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IWebServiceCall.h; sourceTree = "<group>"; };
+		185E1A6A288497C4006FC004 /* BaseWebServiceCall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWebServiceCall.m; sourceTree = "<group>"; };
+		185E1A6C288497F3006FC004 /* BaseWebServiceCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWebServiceCall.h; sourceTree = "<group>"; };
+		185E1A6D2884AB3E006FC004 /* NASASearchAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASASearchAPIViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		185E192528831348006FC004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185E193B2883134A006FC004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185E19452883134A006FC004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		185E191F28831347006FC004 = {
+			isa = PBXGroup;
+			children = (
+				185E192A28831348006FC004 /* NasaApp */,
+				185E19412883134A006FC004 /* NasaAppTests */,
+				185E194B2883134A006FC004 /* NasaAppUITests */,
+				185E192928831348006FC004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		185E192928831348006FC004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				185E192828831348006FC004 /* NasaApp.app */,
+				185E193E2883134A006FC004 /* NasaAppTests.xctest */,
+				185E19482883134A006FC004 /* NasaAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		185E192A28831348006FC004 /* NasaApp */ = {
+			isa = PBXGroup;
+			children = (
+				185E19A82883451D006FC004 /* Network */,
+				185E19FD28841A6C006FC004 /* Database */,
+				185E196628833773006FC004 /* ViewController */,
+				185E196028832FB5006FC004 /* Model */,
+				185E196528833766006FC004 /* Cell */,
+				185E192B28831348006FC004 /* AppDelegate.swift */,
+				185E192D28831348006FC004 /* SceneDelegate.swift */,
+				185E19A5288342CB006FC004 /* Storyboard */,
+				185E19342883134A006FC004 /* Assets.xcassets */,
+				185E19392883134A006FC004 /* Info.plist */,
+			);
+			path = NasaApp;
+			sourceTree = "<group>";
+		};
+		185E19412883134A006FC004 /* NasaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				185E19422883134A006FC004 /* NasaAppTests.swift */,
+			);
+			path = NasaAppTests;
+			sourceTree = "<group>";
+		};
+		185E194B2883134A006FC004 /* NasaAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				185E194C2883134A006FC004 /* NasaAppUITests.swift */,
+				185E194E2883134A006FC004 /* NasaAppUITestsLaunchTests.swift */,
+			);
+			path = NasaAppUITests;
+			sourceTree = "<group>";
+		};
+		185E196028832FB5006FC004 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				185E195E28832FA7006FC004 /* APODModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185E196528833766006FC004 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				185E19632883375F006FC004 /* APODCell.swift */,
+				185E19F02883F29C006FC004 /* APODDetailViewCell.swift */,
+				185E19F828840D0B006FC004 /* APODPlaceHolderCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		185E196628833773006FC004 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185E192F28831348006FC004 /* NasaAPODViewController.swift */,
+				185E19EE2883EEEB006FC004 /* NasaAPODDetailViewController.swift */,
+				185E1A6D2884AB3E006FC004 /* NASASearchAPIViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		185E19A5288342CB006FC004 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				185E195B28831D1E006FC004 /* NasaApp.storyboard */,
+				185E19362883134A006FC004 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		185E19A82883451D006FC004 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A4928849324006FC004 /* Macros.h */,
+				185E1A4A2884935B006FC004 /* APODWebService.h */,
+				185E1A4B288493C3006FC004 /* APODWebService.m */,
+				185E1A0428844DD0006FC004 /* Connector */,
+				185E1A2A28844DD1006FC004 /* Manager */,
+				185E1A0C28844DD0006FC004 /* Parameters */,
+				185E1A1828844DD1006FC004 /* Reachability */,
+				185E1A2528844DD1006FC004 /* Response */,
+				185E1A1028844DD0006FC004 /* ResponseHandler */,
+				185E1A1B28844DD1006FC004 /* WebService */,
+				185E1A2128844DD1006FC004 /* WebServiceCall */,
+				185E19BB2883451D006FC004 /* ThumbnailDownloader */,
+				185E1A0328844DCF006FC004 /* NasaApp-Bridging-Header.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		185E19BB2883451D006FC004 /* ThumbnailDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				185E19BD2883451D006FC004 /* ImageDownloadUtility.swift */,
+				185E19EA2883507A006FC004 /* ImageURLProtocol.swift */,
+			);
+			path = ThumbnailDownloader;
+			sourceTree = "<group>";
+		};
+		185E19FD28841A6C006FC004 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				185E19FA28841A60006FC004 /* CoreDataManager.swift */,
+				185E19FE28841FD0006FC004 /* NasaAPOD.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		185E1A0428844DD0006FC004 /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A4428848D69006FC004 /* IWebServiceConnector.h */,
+				185E1A0828844DD0006FC004 /* BaseWebServiceConnector.h */,
+				185E1A0A28844DD0006FC004 /* BaseWebServiceConnector.m */,
+				185E1A0928844DD0006FC004 /* SearchAPODConnector.h */,
+				185E1A4728849046006FC004 /* SearchAPODConnector.m */,
+				185E1A0B28844DD0006FC004 /* GetAPODByRangeConnector.h */,
+				185E1A4528848D69006FC004 /* GetAPODByRangeConnector.m */,
+			);
+			path = Connector;
+			sourceTree = "<group>";
+		};
+		185E1A0C28844DD0006FC004 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A5028849479006FC004 /* IWebServiceParameter.h */,
+				185E1A51288494B6006FC004 /* SimpleParameter.h */,
+				185E1A52288494B6006FC004 /* SimpleParameter.m */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		185E1A1028844DD0006FC004 /* ResponseHandler */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A5828849576006FC004 /* IWebServiceResponseHandler.h */,
+				185E1A59288495AA006FC004 /* BaseResponseHandler.h */,
+				185E1A5A288495AA006FC004 /* BaseResponseHandler.m */,
+				185E1A5C288495E1006FC004 /* GetAPODByRangeResponseHandler.h */,
+				185E1A5D288495E1006FC004 /* GetAPODByRangeResponseHandler.m */,
+				185E1A5F28849634006FC004 /* SearchAPODResponseHandler.h */,
+				185E1A6028849634006FC004 /* SearchAPODResponseHandler.m */,
+			);
+			path = ResponseHandler;
+			sourceTree = "<group>";
+		};
+		185E1A1828844DD1006FC004 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A1A28844DD1006FC004 /* Reachability.h */,
+				185E1A1928844DD1006FC004 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		185E1A1B28844DD1006FC004 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A62288496B2006FC004 /* IWebService.h */,
+				185E1A63288496EC006FC004 /* BaseWebService.h */,
+				185E1A64288496EC006FC004 /* BaseWebService.m */,
+				185E1A662884972E006FC004 /* RestWebService.h */,
+				185E1A672884972E006FC004 /* RestWebService.m */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		185E1A2128844DD1006FC004 /* WebServiceCall */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A6928849774006FC004 /* IWebServiceCall.h */,
+				185E1A6C288497F3006FC004 /* BaseWebServiceCall.h */,
+				185E1A6A288497C4006FC004 /* BaseWebServiceCall.m */,
+			);
+			path = WebServiceCall;
+			sourceTree = "<group>";
+		};
+		185E1A2528844DD1006FC004 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A5728849528006FC004 /* IWebServiceResponse.h */,
+				185E1A54288494FA006FC004 /* SimpleResponse.h */,
+				185E1A55288494FA006FC004 /* SimpleResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		185E1A2A28844DD1006FC004 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				185E1A4D28849427006FC004 /* WebServiceManager.h */,
+				185E1A4E28849427006FC004 /* WebServiceManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		185E192728831348006FC004 /* NasaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185E19522883134A006FC004 /* Build configuration list for PBXNativeTarget "NasaApp" */;
+			buildPhases = (
+				185E192428831348006FC004 /* Sources */,
+				185E192528831348006FC004 /* Frameworks */,
+				185E192628831348006FC004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NasaApp;
+			productName = NasaApp;
+			productReference = 185E192828831348006FC004 /* NasaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		185E193D2883134A006FC004 /* NasaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185E19552883134B006FC004 /* Build configuration list for PBXNativeTarget "NasaAppTests" */;
+			buildPhases = (
+				185E193A2883134A006FC004 /* Sources */,
+				185E193B2883134A006FC004 /* Frameworks */,
+				185E193C2883134A006FC004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				185E19402883134A006FC004 /* PBXTargetDependency */,
+			);
+			name = NasaAppTests;
+			productName = NasaAppTests;
+			productReference = 185E193E2883134A006FC004 /* NasaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		185E19472883134A006FC004 /* NasaAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185E19582883134B006FC004 /* Build configuration list for PBXNativeTarget "NasaAppUITests" */;
+			buildPhases = (
+				185E19442883134A006FC004 /* Sources */,
+				185E19452883134A006FC004 /* Frameworks */,
+				185E19462883134A006FC004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				185E194A2883134A006FC004 /* PBXTargetDependency */,
+			);
+			name = NasaAppUITests;
+			productName = NasaAppUITests;
+			productReference = 185E19482883134A006FC004 /* NasaAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		185E192028831347006FC004 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					185E192728831348006FC004 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+					185E193D2883134A006FC004 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 185E192728831348006FC004;
+					};
+					185E19472883134A006FC004 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 185E192728831348006FC004;
+					};
+				};
+			};
+			buildConfigurationList = 185E192328831347006FC004 /* Build configuration list for PBXProject "NasaApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 185E191F28831347006FC004;
+			productRefGroup = 185E192928831348006FC004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				185E192728831348006FC004 /* NasaApp */,
+				185E193D2883134A006FC004 /* NasaAppTests */,
+				185E19472883134A006FC004 /* NasaAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		185E192628831348006FC004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185E19382883134A006FC004 /* LaunchScreen.storyboard in Resources */,
+				185E195D28831D1E006FC004 /* NasaApp.storyboard in Resources */,
+				185E19352883134A006FC004 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185E193C2883134A006FC004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185E19462883134A006FC004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		185E192428831348006FC004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185E1A65288496EC006FC004 /* BaseWebService.m in Sources */,
+				185E1A5E288495E1006FC004 /* GetAPODByRangeResponseHandler.m in Sources */,
+				185E1A0028841FD0006FC004 /* NasaAPOD.xcdatamodeld in Sources */,
+				185E19DE2883451D006FC004 /* ImageDownloadUtility.swift in Sources */,
+				185E19EB2883507A006FC004 /* ImageURLProtocol.swift in Sources */,
+				185E193028831348006FC004 /* NasaAPODViewController.swift in Sources */,
+				185E19642883375F006FC004 /* APODCell.swift in Sources */,
+				185E192C28831348006FC004 /* AppDelegate.swift in Sources */,
+				185E1A6E2884AB3E006FC004 /* NASASearchAPIViewController.swift in Sources */,
+				185E1A6B288497C4006FC004 /* BaseWebServiceCall.m in Sources */,
+				185E1A5B288495AA006FC004 /* BaseResponseHandler.m in Sources */,
+				185E1A6128849634006FC004 /* SearchAPODResponseHandler.m in Sources */,
+				185E1A56288494FA006FC004 /* SimpleResponse.m in Sources */,
+				185E1A3128844DD1006FC004 /* BaseWebServiceConnector.m in Sources */,
+				185E1A682884972E006FC004 /* RestWebService.m in Sources */,
+				185E1A4828849046006FC004 /* SearchAPODConnector.m in Sources */,
+				185E19F22883F29C006FC004 /* APODDetailViewCell.swift in Sources */,
+				185E1A4F28849427006FC004 /* WebServiceManager.m in Sources */,
+				185E192E28831348006FC004 /* SceneDelegate.swift in Sources */,
+				185E19F928840D0B006FC004 /* APODPlaceHolderCell.swift in Sources */,
+				185E1A53288494B6006FC004 /* SimpleParameter.m in Sources */,
+				185E1A3628844DD1006FC004 /* Reachability.m in Sources */,
+				185E1A4628848D6A006FC004 /* GetAPODByRangeConnector.m in Sources */,
+				185E195F28832FA7006FC004 /* APODModel.swift in Sources */,
+				185E19EF2883EEEB006FC004 /* NasaAPODDetailViewController.swift in Sources */,
+				185E1A4C288493C3006FC004 /* APODWebService.m in Sources */,
+				185E19FB28841A60006FC004 /* CoreDataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185E193A2883134A006FC004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185E19432883134A006FC004 /* NasaAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185E19442883134A006FC004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185E194D2883134A006FC004 /* NasaAppUITests.swift in Sources */,
+				185E194F2883134A006FC004 /* NasaAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		185E19402883134A006FC004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 185E192728831348006FC004 /* NasaApp */;
+			targetProxy = 185E193F2883134A006FC004 /* PBXContainerItemProxy */;
+		};
+		185E194A2883134A006FC004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 185E192728831348006FC004 /* NasaApp */;
+			targetProxy = 185E19492883134A006FC004 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		185E19362883134A006FC004 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185E19372883134A006FC004 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		185E195B28831D1E006FC004 /* NasaApp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185E195C28831D1E006FC004 /* Base */,
+			);
+			name = NasaApp.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		185E19502883134A006FC004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		185E19512883134A006FC004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		185E19532883134A006FC004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VSQ9KLSSUY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NasaApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = NasaApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiochatapp.jiochat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = JioChat_Development;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NasaApp/Network/NasaApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		185E19542883134A006FC004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VSQ9KLSSUY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NasaApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = NasaApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiochatapp.jiochat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = JioChat_Development;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NasaApp/Network/NasaApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		185E19562883134B006FC004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V3CKX2B3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasaapp.nasa.NasaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NasaApp.app/NasaApp";
+			};
+			name = Debug;
+		};
+		185E19572883134B006FC004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V3CKX2B3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasaapp.nasa.NasaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NasaApp.app/NasaApp";
+			};
+			name = Release;
+		};
+		185E19592883134B006FC004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V3CKX2B3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasaapp.nasa.NasaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NasaApp;
+			};
+			name = Debug;
+		};
+		185E195A2883134B006FC004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V3CKX2B3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nasaapp.nasa.NasaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NasaApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		185E192328831347006FC004 /* Build configuration list for PBXProject "NasaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185E19502883134A006FC004 /* Debug */,
+				185E19512883134A006FC004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		185E19522883134A006FC004 /* Build configuration list for PBXNativeTarget "NasaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185E19532883134A006FC004 /* Debug */,
+				185E19542883134A006FC004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		185E19552883134B006FC004 /* Build configuration list for PBXNativeTarget "NasaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185E19562883134B006FC004 /* Debug */,
+				185E19572883134B006FC004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		185E19582883134B006FC004 /* Build configuration list for PBXNativeTarget "NasaAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185E19592883134B006FC004 /* Debug */,
+				185E195A2883134B006FC004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		185E19FE28841FD0006FC004 /* NasaAPOD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				185E19FF28841FD0006FC004 /* NasaAPOD.xcdatamodel */,
+			);
+			currentVersion = 185E19FF28841FD0006FC004 /* NasaAPOD.xcdatamodel */;
+			path = NasaAPOD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 185E192028831347006FC004 /* Project object */;
+}
